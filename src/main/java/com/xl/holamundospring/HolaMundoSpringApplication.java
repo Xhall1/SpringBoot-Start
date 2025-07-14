@@ -8,7 +8,7 @@ public class HolaMundoSpringApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(HolaMundoSpringApplication.class, args);
-        System.out.println("Hola Mundo Spring Boot Application");
+        System.out.println("Hello World Spring MVC");
     }
 
 }
