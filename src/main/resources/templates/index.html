@@ -10,12 +10,24 @@
     <p th:text="${message}"></p>
     <p th:text="${greetings}"></p>
     <br />
-    Name: <span th:text="${person.name}">Show Name</span>
-    <br/>
-    Surname: <span th:text="${person.surname}">Show Surname</span>
-    <br/>
-    Email: <span th:text="${person.email}">Show Email</span>
-    <br/>
-    Phone: <span th:text="${person.phone}">Show Phone</span>
+    <div th:if="${persons != null and !#lists.isEmpty(persons)}"> <!-- If the list is not empty -->
+        <table border="1">
+            <tr>
+                <th>Name:</th>
+                <th>Surname:</th>
+                <th>Email:</th>
+                <th>Phone:</th>
+            </tr>
+
+
+            <tr th:each="person : ${persons}">
+                <td th:text="${person.name}"></td>
+                <td th:text="${person.surname}"></td>
+                <td th:text="${person.email}"></td>
+                <td th:text="${person.phone}"></td>
+            </tr>
+        </table>
+    </div>
+    <p th:if="${#lists.isEmpty(persons)}">The list is empty</p> <!-- If the list is empty -->
 </body>
 </html>
