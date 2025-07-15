@@ -6,10 +6,6 @@
 </head>
 <body>
     <h1>Start</h1>
-    <!--<p th:text="Greetings"></p>-->
-    <p th:text="${message}"></p>
-    <p th:text="${greetings}"></p>
-    <br />
     <div th:if="${persons != null and !#lists.isEmpty(persons)}"> <!-- If the list is not empty -->
         <table border="1">
             <tr>
